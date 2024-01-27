@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "name": "stayhydrated",
+  "description": "A file simple example manifest.webapp",
+  "type": "web",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/your/repository/icons/ic_Appname_56.png",
+    "112": "/your/repository/icons/ic_Appname_112.png"
+  },
+  "developer": {
+    "name": "Your Name",
+    "url": "http://yourawesomeapp.com"
+  },
+  "locales": {
+    "en-US": {
+      "name": "Stay hydrated",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "de-DE": {
+      "name": "Bleib hydriert",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    }
+  },
+  "default_locale": "en-US"
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay hydrated</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark.css">
+    <link rel="stylesheet" href="kaiui.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="script.js" defer></script>
+    <script src="/translation/script.js" defer></script>
+</head>
+
+<body>
+    <div id="kui-app">
+        <header class="kui-header kui-color-blue kui-h1" data-translate="setup"></header>
+        <div class="kui-content-area">
+            <div class="kui-separator">
+                <h4 class="kui-h4" data-translate="water_intake_goal"></h4>
+            </div>
+            <ul class="kui-list kui-list-type_1">
+                <!-- AUTO GOAL -->
+                <li tabindex="1">
+                    <div class="kui-list-img selected"></div>
+                    <div class="kui-list-cont">
+                        <p class="kui-pri" data-translate="auto"></p>
+                    </div>
+                </li>
+                <div id="auto" class="">
+                    <div tabindex="2" class="kui-input-holder selector" onclick=" toggleSelectedItem();">
+                        <div class="item" id="leftItem">kg</div>
+                        <div class="item selected" id="rightItem">lbs</div>
+
+                    </div>
+                    <div class="kui-input-holder">
+                        <input tabindex="3" type="tel" name="" id="" class="kui-input" data-translate="weight">
+                    </div>
+                </div>
+
+                <!-- OWN GOAL -->
+                <li tabindex="4">
+                    <div class="kui-list-img"></div>
+                    <div class="kui-list-cont">
+                        <p class="kui-pri" data-translate="own_goal"></p>
+                    </div>
+                </li>
+                <div id="ownGoal" class="hidden">
+                    <div tabindex="5" class="kui-input-holder selector" onclick=" toggleSelectedItem();">
+                        <div class="item" id="leftItem">ml</div>
+                        <div class="item selected" id="rightItem">oz</div>
+                    </div>
+                    <div class="kui-input-holder">
+                        <input tabindex="6" type="tel" name="" id="" class="kui-input" data-translate="amount">
+                    </div>
+                </div>
+            </ul>
+            <div class="kui-separator">
+                <h4 class="kui-h4" data-translate="workout"></h4>
+            </div>
+            <div class="progress progress_range">
+                <label for="">
+                    <span class="progress-label kui-pri" data-translate="daily_workout_length"></span>
+                    <span class="progress-value kui-sec">30min</span>
+                </label>
+                <input type="range" min="0" max="120" value="30" step="15">
+            </div>
+        </div>
+        <div class="kui-software-key">
+            <h5 role="button" class="kui-h5 kui-text-left">Left Key</h5>
+            <h5 role="button" class="kui-h5 kui-text-center kui-text-upcase">Select</h5>
+            <h5 role="button" class="kui-h5 kui-text-right">Right Key</h5>
+        </div>
+    </div>
+</body>
+
+</html>

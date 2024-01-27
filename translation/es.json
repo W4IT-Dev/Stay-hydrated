@@ -1,0 +1,19 @@
+{
+    "app_name": "Manténgase hidratado",
+    "water_intake_goal": "Cantidad objetivo de ingesta de agua",
+    "setup": "Configurar",
+    "auto": "Auto",
+    "own_goal": "Objetivo propio",
+    "weight": "peso",
+    "amount": "cantidad",
+    "options": "opciones",
+    "cup_size": "tamaño de copa",
+    "workout": "entrenamiento",
+    "daily_workout_length": "Duración del entrenamiento diario",
+    "drinking_reminder_interval": "intervalo de recordatorio de bebida",
+    "sleeping_schedule": "horario de sueño",
+    "dark_mode": "modo oscuro",
+    "adjust_settings": "ajustar la configuración",
+    "drink_history": "historial de bebida"
+  }
+  

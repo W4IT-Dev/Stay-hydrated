@@ -1,0 +1,18 @@
+{
+    "app_name": "保持水分充足",
+    "water_intake_goal": "水摄入目标量",
+    "setup": "设置",
+    "auto": "自动",
+    "own_goal": "自己的目标",
+    "weight": "重量",
+    "amount": "数量",
+    "options": "选项",
+    "cup_size": "罩杯大小",
+    "workout": "锻炼",
+    "daily_workout_length": "每日锻炼时长",
+    "drinking_reminder_interval": "饮水提醒间隔",
+    "sleeping_schedule": "睡眠时间表",
+    "dark_mode": "黑暗模式",
+    "adjust_settings": "调整设置",
+    "drink_history": "饮酒记录"
+  }  

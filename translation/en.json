@@ -1,0 +1,19 @@
+{
+    "app_name": "Stay Hydrated",
+    "water_intake_goal": "Water intake goal",
+    "setup": "Setup",
+    "auto": "Auto",
+    "own_goal": "Own Goal",
+    "weight": "Weight",
+    "amount": "Amount",
+    "options": "Options",
+    "cup_size": "Cup Size",
+    "workout": "Workout",
+    "daily_workout_length": "Daily workout length",
+    "drinking_reminder_interval": "Drinking Reminder Interval",
+    "sleeping_schedule": "Sleeping Schedule",
+    "dark_mode": "Dark Mode",
+    "adjust_settings": "Adjust Settings",
+    "drink_history": "Drink History"
+  }
+  

@@ -1,0 +1,18 @@
+{
+    "app_name": "Оставайтесь увлажненными",
+    "water_intake_goal": "Целевое количество потребляемой воды",
+    "setup": "Настройка",
+    "auto": "Авто",
+    "own_goal": "Собственная цель",
+    "weight": "вес",
+    "amount": "количество",
+    "options": "опции",
+    "cup_size": "размер чашки",
+    "workout": "тренировка",
+    "daily_workout_length": "Продолжительность ежедневной тренировки",
+    "drinking_reminder_interval": "интервал напоминания о питье",
+    "sleeping_schedule": "режим сна",
+    "dark_mode": "тёмный режим",
+    "adjust_settings": "настройка параметров",
+    "drink_history": "история напитков"
+}

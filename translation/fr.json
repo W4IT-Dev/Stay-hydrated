@@ -1,0 +1,19 @@
+{
+    "app_name": "Restez hydraté",
+    "water_intake_goal": "Objectif de consommation d'eau",
+    "setup": "Mise en place",
+    "auto": "Auto",
+    "own_goal": "Objectif personnel",
+    "weight": "poids",
+    "amount": "quantité",
+    "options": "options",
+    "cup_size": "taille du gobelet",
+    "workout": "entraînement",
+    "daily_workout_length": "Durée de l'entraînement quotidien",
+    "drinking_reminder_interval": "intervalle de rappel de consommation",
+    "sleeping_schedule": "horaire de sommeil",
+    "dark_mode": "mode sombre",
+    "adjust_settings": "ajuster les paramètres",
+    "drink_history": "historique des boissons"
+  }
+  

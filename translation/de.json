@@ -1,0 +1,19 @@
+{
+    "app_name": "Bleib hydriert",
+    "water_intake_goal": "Zielmenge der Wasseraufnahme",
+    "setup": "Einrichtung",
+    "auto": "Auto",
+    "own_goal": "Eigenes Ziel",
+    "weight": "Gewicht",
+    "amount": "Menge",
+    "options": "Optionen",
+    "cup_size": "Körbchengröße",
+    "workout": "Training",
+    "daily_workout_length": "Dauer des täglichen Trainings",
+    "drinking_reminder_interval": "Trinkerinnerungsintervall",
+    "sleeping_schedule": "Schlafplan",
+    "dark_mode": "Dunkelmodus",
+    "adjust_settings": "Einstellungen anpassen",
+    "drink_history": "Trinkhistorie"
+  }
+  
