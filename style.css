@@ -9,11 +9,13 @@ body {
 /* BI-SELECTOR*/
 .selector {
     display: flex;
+    flex-direction: row !important;
     align-items: center;
     justify-content: center;
 }
 
 .item {
+    font-size: 16px;
     text-align: center;
     width: auto;
     min-width: 30px;
@@ -21,7 +23,8 @@ body {
     /* transition: background-color 0.3s; */
 }
 
-.selected {
+.item.selected {
     background-color: #343cdb;
     color: #fff;
+    font-weight: 700;
 }

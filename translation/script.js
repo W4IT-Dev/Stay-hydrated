@@ -1,17 +1,29 @@
-const supportedLanguages = ['en', 'fr', 'es', 'de', 'ru', 'zh'];
-let translations = [];
+var supportedLanguages = ['en', 'fr', 'es', 'de', 'ru', 'zh'];
+var translations = {};
 
-
-async function loadLanguageFile(language) {
-  return fetch(`/translation/${language}.json`)
-    .then(response => response.json())
-    .then(data => {
-      // Save the loaded translations in a variable or global object
-      translations = data;
-      console.log(translations);
-
-    })
-    .catch(error => console.error(`Error loading language file: ${error}`));
+function loadLanguageFile(language) {
+  return new Promise(function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/translation/' + language + '.json', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          try {
+            translations = JSON.parse(xhr.responseText);
+            console.log(translations);
+            if (language === "ar") document.body.style.direction = "rtl";
+            else document.body.style.direction = "ltr";
+            resolve();
+          } catch (error) {
+            reject('Error parsing language file: ' + error);
+          }
+        } else {
+          reject('Error loading language file: ' + xhr.statusText);
+        }
+      }
+    };
+    xhr.send();
+  });
 }
 
 function translate(key) {
@@ -19,25 +31,47 @@ function translate(key) {
 }
 
 function updateUIWithTranslations() {
-  // Get all elements with a 'data-translate' attribute
-  const elementsToTranslate = document.querySelectorAll('[data-translate]');
+  var elementsToTranslate = document.querySelectorAll('[data-translate]');
 
-  // Update each element with translated text
-  elementsToTranslate.forEach(element => {
-    const key = element.getAttribute('data-translate');
-    console.log(element.nodeName)
-    if (element.nodeName == "INPUT") element.placeholder = translate(key)
-    else element.innerText = translate(key);
+  // Convert NodeList to array for compatibility with older browsers
+  var elementsArray = Array.prototype.slice.call(elementsToTranslate);
+
+  elementsArray.forEach(function(element) {
+    var key = element.getAttribute('data-translate');
+
+    if (element.nodeName === "INPUT") {
+      element.placeholder = translate(key);
+    } else {
+      element.innerText = translate(key);
+    }
   });
 }
+
 
 function isLanguageSupported(language) {
   return supportedLanguages.includes(language);
 }
 
-loadLanguageFile(navigator.language.split('-')[0]).then(()=>{
-  updateUIWithTranslations();
-})
+var userLanguage = navigator.language || navigator.userLanguage; // For older Firefox versions
+var languageCode = userLanguage.split('-')[0];
 
-// TODO: REPLACE "AUTO" WITH "AUTOMATIC"
-// TODO: BETTER TRANSLATION FOR "SETUP"
+if (isLanguageSupported(languageCode)) {
+  loadLanguageFile(languageCode).then(function() {
+    updateUIWithTranslations();
+  }).catch(function(error) {
+    console.error(error);
+  });
+} else {
+  console.error('Unsupported language: ' + languageCode);
+}
+
+
+loadLanguageFile(languageCode).then(function() {
+  updateUIWithTranslations();
+}).catch(function(error) {
+  console.error(error);
+});
+
+
+// TODO: REPLACE "AUTO" WITH "AUTOMATIC" ✔
+// TODO: BETTER TRANSLATION FOR "SETUP", ⚠ @CUP SIYE@✔

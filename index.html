@@ -7,70 +7,76 @@
     <title>Stay hydrated</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dark.css">
-    <link rel="stylesheet" href="kaiui.css">
-    <link rel="stylesheet" href="normalize.css">
+    <!-- <link rel="stylesheet" href="kaiui.css"> -->
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="kaios-native-ui.css">
+    <script src="kaios-native-ui.js" defer></script>
     <script src="script.js" defer></script>
     <script src="/translation/script.js" defer></script>
 </head>
 
 <body>
-    <div id="kui-app">
-        <header class="kui-header kui-color-blue kui-h1" data-translate="setup"></header>
-        <div class="kui-content-area">
-            <div class="kui-separator">
-                <h4 class="kui-h4" data-translate="water_intake_goal"></h4>
-            </div>
-            <ul class="kui-list kui-list-type_1">
-                <!-- AUTO GOAL -->
-                <li tabindex="1">
-                    <div class="kui-list-img selected"></div>
-                    <div class="kui-list-cont">
-                        <p class="kui-pri" data-translate="auto"></p>
-                    </div>
-                </li>
-                <div id="auto" class="">
-                    <div tabindex="2" class="kui-input-holder selector" onclick=" toggleSelectedItem();">
-                        <div class="item" id="leftItem">kg</div>
-                        <div class="item selected" id="rightItem">lbs</div>
+    <div id="app">
+        <header id="header" data-translate="setup"></header>
+        <div class="toast"></div>
+        <div id="content">
 
-                    </div>
-                    <div class="kui-input-holder">
-                        <input tabindex="3" type="tel" name="" id="" class="kui-input" data-translate="weight">
-                    </div>
-                </div>
-
-                <!-- OWN GOAL -->
-                <li tabindex="4">
-                    <div class="kui-list-img"></div>
-                    <div class="kui-list-cont">
-                        <p class="kui-pri" data-translate="own_goal"></p>
-                    </div>
-                </li>
-                <div id="ownGoal" class="hidden">
-                    <div tabindex="5" class="kui-input-holder selector" onclick=" toggleSelectedItem();">
-                        <div class="item" id="leftItem">ml</div>
-                        <div class="item selected" id="rightItem">oz</div>
-                    </div>
-                    <div class="kui-input-holder">
-                        <input tabindex="6" type="tel" name="" id="" class="kui-input" data-translate="amount">
-                    </div>
-                </div>
-            </ul>
-            <div class="kui-separator">
-                <h4 class="kui-h4" data-translate="workout"></h4>
+            <!-- GOAL -->
+            <div class="separator" data-translate="water_intake_goal"></div>
+            <!-- AUTO -->
+            <div class="radio-container">
+                <p class="radio-container__text" data-translate="auto_calculated"></p>
+                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <div class="radio-container__radio"></div>
             </div>
-            <div class="progress progress_range">
-                <label for="">
-                    <span class="progress-label kui-pri" data-translate="daily_workout_length"></span>
-                    <span class="progress-value kui-sec">30min</span>
-                </label>
-                <input type="range" min="0" max="120" value="30" step="15">
+            <div tabindex="0" class="selector focusable list-item" onclick=" toggleSelectedItem(this);">
+                <div class="item" id="leftItem" data-translate="kg">kg</div>
+                <div class="item selected" id="rightItem" data-translate="lbs">lbs</div>
+            </div>
+            <div class="input-container">
+                <label class="input-container__label" data-translate="weight"></label>
+                <input type="text" tabindex="0" class="input-container__input focusable" />
+            </div>
+
+            <!-- OWN GOAL -->
+            <div class="radio-container">
+                <p class="radio-container__text" data-translate="own_goal"></p>
+                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <div class="radio-container__radio"></div>
+            </div>
+            <div tabindex="0" class="selector focusable list-item hidden" onclick=" toggleSelectedItem(this);">
+                <div class="item" id="leftItem" data-translate="ml">ml</div>
+                <div class="item selected" id="rightItem" data-translate="oz">oz</div>
+            </div>
+            <div class="input-container hidden">
+                <label class="input-container__label" data-translate="amount"></label>
+                <input type="text" tabindex="0" class="input-container__input focusable" />
+            </div>
+
+            <!--  WORKOUT -->
+            <div class="separator" data-translate="workout"></div>
+            <div class="slider-container">
+                <p class="slider-container__text" data-translate="daily_workout_length"></p>
+                <p class="slider-container__subtext">30 min</p>
+                <input type="range" tabindex="0" min="0" max="120" value="30" step="15"
+                    class="slider-container__slider focusable" />
+            </div>
+
+            <!-- CUP SIZE -->
+            <div class="separator" data-translate="cup_size"></div>
+            <div tabindex="0" class="selector focusable list-item" onclick=" toggleSelectedItem(this);">
+                <div class="item" id="leftItem" data-translate="ml">ml</div>
+                <div class="item selected" id="rightItem" data-translate="oz">oz</div>
+            </div>
+            <div class="input-container">
+                <label class="input-container__label" data-translate="amount"></label>
+                <input type="text" tabindex="0" class="input-container__input focusable" />
             </div>
         </div>
-        <div class="kui-software-key">
-            <h5 role="button" class="kui-h5 kui-text-left">Left Key</h5>
-            <h5 role="button" class="kui-h5 kui-text-center kui-text-upcase">Select</h5>
-            <h5 role="button" class="kui-h5 kui-text-right">Right Key</h5>
+        <div class="softkeys">
+            <div class="softkey softkey-left">Left Key</div>
+            <div class="softkey softkey-center">Select</div>
+            <div class="softkey softkey-right">Right Key</div>
         </div>
     </div>
 </body>

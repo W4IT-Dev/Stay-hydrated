@@ -22,6 +22,11 @@
       "name": "Bleib hydriert",
       "subtitle": "Short description for the user",
       "description": "Brief description of your app"
+    },
+    "fr-FR": {
+      "name": "Restez hydraté",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
     }
   },
   "default_locale": "en-US"

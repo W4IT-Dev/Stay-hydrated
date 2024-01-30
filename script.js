@@ -1,10 +1,7 @@
-const items = document.querySelectorAll('.item');
 
-// Initial setup
-toggleSelectedItem();
 
-// Function to toggle selected item
-function toggleSelectedItem() {
+function toggleSelectedItem(parentElement) {
+    let items = parentElement.querySelectorAll('.item')
     items.forEach(item => {
         item.classList.toggle('selected');
     });

@@ -2,7 +2,7 @@
     "app_name": "Stay Hydrated",
     "water_intake_goal": "Water intake goal",
     "setup": "Setup",
-    "auto": "Auto",
+    "auto_calculated": "Automaticaly calculated",
     "own_goal": "Own Goal",
     "weight": "Weight",
     "amount": "Amount",
@@ -14,6 +14,10 @@
     "sleeping_schedule": "Sleeping Schedule",
     "dark_mode": "Dark Mode",
     "adjust_settings": "Adjust Settings",
-    "drink_history": "Drink History"
+    "drink_history": "Drink History",
+    "kg": "kg",
+    "lbs": "lbs",
+    "ml": "ml",
+    "oz": "oz"
   }
   

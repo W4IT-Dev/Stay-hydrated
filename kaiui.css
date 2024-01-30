@@ -383,13 +383,16 @@ button.kui-btn:focus {
 
 /* ============== Progress ============== */
 .progress {
-    background: #fff;
     box-sizing: border-box;
     height: 60px;
     padding: 10px 10px;
 }
 
-.progress:focus .progress-label {
+.progress:focus {
+    background-color: #0071dd;
+}
+
+.progress:focus .progress-label, .progress:focus .progress-value {
     color: #fff;
 }
 
