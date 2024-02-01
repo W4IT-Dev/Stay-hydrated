@@ -50,7 +50,7 @@
             </div>
             <div class="input-container hidden">
                 <label class="input-container__label" data-translate="amount"></label>
-                <input type="text" tabindex="0" class="input-container__input focusable" />
+                <input type="tel" tabindex="0" class="input-container__input focusable" />
             </div>
 
             <!--  WORKOUT -->
@@ -70,15 +70,56 @@
             </div>
             <div class="input-container">
                 <label class="input-container__label" data-translate="amount"></label>
-                <input type="text" tabindex="0" class="input-container__input focusable" />
+                <input type="tel" tabindex="0" class="input-container__input focusable" />
+            </div>
+
+            <!-- drinking_reminder_interval -->
+            <div class="separator" data-translate="drinking_reminder_interval"></div>
+            <div class="radio-container">
+                <p class="radio-container__text" data-translate="auto_calculated"></p>
+                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <div class="radio-container__radio"></div>
+            </div>
+            <div class="radio-container">
+                <p class="radio-container__text" data-translate="hourly"></p>
+                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <div class="radio-container__radio"></div>
+            </div>
+
+            <!-- SLeeping schedule -->
+            <div class="separator" data-translate="sleeping_schedule"></div>
+            <div class="input-container">
+                <label class="input-container__label " data-translate="amount"></label>
+                <input type="number" tabindex="0" class="input-container__input focusable" />
+            </div>
+
+        </div><!--content-->
+        <div class="option-menu">
+            <h2 class="option-title">Select time</h2>
+            <div class="time-input">
+                <div class="hour">05</div>
+                <div class="separatorr">:</div>
+                <div class="minute">00</div>
             </div>
         </div>
+        <div class="option-menu">
+            <h2 class=" option-title" data-translate="options"></h2>
+            <div class="options">
+                <div class="list-item focusable" tabindex="0">Option 1</div>
+                <div class="list-item focusable" tabindex="0">Option 1</div>
+                <div class="list-item focusable" tabindex="0">Option 1</div>
+                <div class="list-item focusable" tabindex="0">Option 1</div>
+                <div class="list-item focusable" tabindex="0">Option 1</div>
+            </div>
+        </div>
+
+
         <div class="softkeys">
             <div class="softkey softkey-left">Left Key</div>
             <div class="softkey softkey-center">Select</div>
             <div class="softkey softkey-right">Right Key</div>
         </div>
-    </div>
+    </div><!--app-->
 </body>
 
 </html>

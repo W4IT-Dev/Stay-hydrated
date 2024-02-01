@@ -1,4 +1,4 @@
-var supportedLanguages = ['en', 'fr', 'es', 'de', 'ru', 'zh'];
+var supportedLanguages = ['en', 'fr', 'es', 'de', 'ru', 'zh', 'ar'];
 var translations = {};
 
 function loadLanguageFile(language) {
@@ -75,3 +75,4 @@ loadLanguageFile(languageCode).then(function() {
 
 // TODO: REPLACE "AUTO" WITH "AUTOMATIC" ✔
 // TODO: BETTER TRANSLATION FOR "SETUP", ⚠ @CUP SIYE@✔
+// TODO: Add new translations for: Select time, Wake up, Sleep
