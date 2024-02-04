@@ -11,7 +11,9 @@
     <!-- <link rel="stylesheet" href="normalize.css"> -->
     <link rel="stylesheet" href="kaios-native-ui.css">
     <script src="kaios-native-ui.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="/js/DOM.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/functions.js" defer></script>
     <script src="/translation/script.js" defer></script>
 </head>
 
@@ -24,22 +26,22 @@
             <!-- GOAL -->
             <div class="separator" data-translate="water_intake_goal"></div>
             <!-- AUTO -->
-            <div class="radio-container">
+            <div id="autoGoal" class="radio-container">
                 <p class="radio-container__text" data-translate="auto_calculated"></p>
                 <input type="radio" tabindex="0" class="focusable radio-container__input" />
                 <div class="radio-container__radio"></div>
             </div>
-            <div tabindex="0" class="selector focusable list-item" onclick=" toggleSelectedItem(this);">
-                <div class="item" id="leftItem" data-translate="kg">kg</div>
-                <div class="item selected" id="rightItem" data-translate="lbs">lbs</div>
+            <div tabindex="0" id="weightUnitChoose" class="selector focusable list-item" value="kg" onclick="toggleSelectedItem(this);">
+                <div class="item selected" id="leftItem" data-translate="kg">kg</div>
+                <div class="item " id="rightItem" data-translate="lbs">lbs</div>
             </div>
             <div class="input-container">
                 <label class="input-container__label" data-translate="weight"></label>
-                <input type="text" tabindex="0" class="input-container__input focusable" />
+                <input type="tel" tabindex="0" id="weightInput" class="input-container__input focusable" value="52" />
             </div>
 
             <!-- OWN GOAL -->
-            <div class="radio-container">
+            <div id="ownGoal" class="radio-container">
                 <p class="radio-container__text" data-translate="own_goal"></p>
                 <input type="radio" tabindex="0" class="focusable radio-container__input" />
                 <div class="radio-container__radio"></div>
@@ -64,9 +66,9 @@
 
             <!-- CUP SIZE -->
             <div class="separator" data-translate="cup_size"></div>
-            <div tabindex="0" class="selector focusable list-item" onclick=" toggleSelectedItem(this);">
-                <div class="item" id="leftItem" data-translate="ml">ml</div>
-                <div class="item selected" id="rightItem" data-translate="oz">oz</div>
+            <div tabindex="0" id="fluidUnitChoose" class="selector focusable list-item" onclick=" toggleSelectedItem(this);">
+                <div class="item selected" id="leftItem" data-translate="ml">ml</div>
+                <div class="item " id="rightItem" data-translate="oz">oz</div>
             </div>
             <div class="input-container">
                 <label class="input-container__label" data-translate="amount"></label>
@@ -89,19 +91,16 @@
             <!-- SLeeping schedule -->
             <div class="separator" data-translate="sleeping_schedule"></div>
             <div class="input-container">
-                <label class="input-container__label " data-translate="amount"></label>
-                <input type="number" tabindex="0" class="input-container__input focusable" />
+                <label class="input-container__label " data-translate="wake_up_time" ></label>
+                <input type="time" tabindex="0" class="input-container__input focusable" value="07:00" />
+            </div>
+            <div class="input-container">
+                <label class="input-container__label " data-translate="sleep_time" ></label>
+                <input type="time" tabindex="0" class="input-container__input focusable" value="20:00"/>
             </div>
 
         </div><!--content-->
-        <div class="option-menu">
-            <h2 class="option-title">Select time</h2>
-            <div class="time-input">
-                <div class="hour">05</div>
-                <div class="separatorr">:</div>
-                <div class="minute">00</div>
-            </div>
-        </div>
+
         <div class="option-menu">
             <h2 class=" option-title" data-translate="options"></h2>
             <div class="options">

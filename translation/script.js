@@ -63,10 +63,10 @@ if (isLanguageSupported(languageCode)) {
   });
 } else {
   console.error('Unsupported language: ' + languageCode);
-}
+} 
 
 
-loadLanguageFile(languageCode).then(function() {
+loadLanguageFile('en'||languageCode).then(function() {
   updateUIWithTranslations();
 }).catch(function(error) {
   console.error(error);

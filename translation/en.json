@@ -19,5 +19,7 @@
   "kg": "kg",
   "lbs": "lbs",
   "ml": "ml",
-  "oz": "oz"
+  "oz": "oz",
+  "wake_up_time": "Wake-up time",
+  "sleep_time": "Sleep time"
 }

@@ -1,5 +1,3 @@
-
-
 function toggleSelectedItem(parentElement) {
     let items = parentElement.querySelectorAll('.item')
     items.forEach(item => {
