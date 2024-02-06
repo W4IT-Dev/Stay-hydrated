@@ -1,0 +1,1 @@
+let waterIntakeToday = localStorage.waterIntakeToday == undefined ? 0 : localStorage.waterIntakeToday

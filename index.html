@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="normalize.css"> -->
     <link rel="stylesheet" href="kaios-native-ui.css">
     <script src="kaios-native-ui.js" defer></script>
+    <script src="/js/variables.js" defer></script>
     <script src="/js/DOM.js" defer></script>
     <script src="/js/script.js" defer></script>
     <script src="/js/functions.js" defer></script>
@@ -21,8 +22,13 @@
     <div id="app">
         <header id="header" data-translate="setup"></header>
         <div class="toast"></div>
-        <div id="content">
-
+        <div class="content home hidden">
+            <div class="glass"></div>
+            <h2 class="intakeGoal"></h2>
+            <div class="quickCupSizeChoose">
+            </div>
+        </div>
+        <div class="content setup">
             <!-- GOAL -->
             <div class="separator" data-translate="water_intake_goal"></div>
             <!-- AUTO -->
@@ -31,13 +37,16 @@
                 <input type="radio" tabindex="0" class="focusable radio-container__input" />
                 <div class="radio-container__radio"></div>
             </div>
-            <div tabindex="0" id="weightUnitChoose" class="selector focusable list-item" value="kg" onclick="toggleSelectedItem(this);">
+            <div tabindex="0" id="weightUnitChoose" class="selector focusable list-item" value="kg">
                 <div class="item selected" id="leftItem" data-translate="kg">kg</div>
                 <div class="item " id="rightItem" data-translate="lbs">lbs</div>
             </div>
             <div class="input-container">
                 <label class="input-container__label" data-translate="weight"></label>
-                <input type="tel" tabindex="0" id="weightInput" class="input-container__input focusable" value="52" />
+                <input type="tel" tabindex="0" id="weightInput" class="input-container__input focusable" value="60" oninput="calculateWaterIntake();" />
+            </div>
+            <div class="list-item small focusable" tabindex="0" data-focus=" ,EDIT,">
+                <p class="list-item__text calculatedNeededWaterIntake">Goal: 2542ml</p>
             </div>
 
             <!-- OWN GOAL -->
@@ -46,7 +55,7 @@
                 <input type="radio" tabindex="0" class="focusable radio-container__input" />
                 <div class="radio-container__radio"></div>
             </div>
-            <div tabindex="0" class="selector focusable list-item hidden" onclick=" toggleSelectedItem(this);">
+            <div tabindex="0" class="selector focusable list-item hidden">
                 <div class="item" id="leftItem" data-translate="ml">ml</div>
                 <div class="item selected" id="rightItem" data-translate="oz">oz</div>
             </div>
@@ -66,7 +75,8 @@
 
             <!-- CUP SIZE -->
             <div class="separator" data-translate="cup_size"></div>
-            <div tabindex="0" id="fluidUnitChoose" class="selector focusable list-item" onclick=" toggleSelectedItem(this);">
+            <div tabindex="0" id="fluidUnitChoose" class="selector focusable list-item"
+                onclick=" toggleSelectedItem(this);">
                 <div class="item selected" id="leftItem" data-translate="ml">ml</div>
                 <div class="item " id="rightItem" data-translate="oz">oz</div>
             </div>
@@ -91,12 +101,12 @@
             <!-- SLeeping schedule -->
             <div class="separator" data-translate="sleeping_schedule"></div>
             <div class="input-container">
-                <label class="input-container__label " data-translate="wake_up_time" ></label>
+                <label class="input-container__label " data-translate="wake_up_time"></label>
                 <input type="time" tabindex="0" class="input-container__input focusable" value="07:00" />
             </div>
             <div class="input-container">
-                <label class="input-container__label " data-translate="sleep_time" ></label>
-                <input type="time" tabindex="0" class="input-container__input focusable" value="20:00"/>
+                <label class="input-container__label " data-translate="sleep_time"></label>
+                <input type="time" tabindex="0" class="input-container__input focusable" value="20:00" />
             </div>
 
         </div><!--content-->

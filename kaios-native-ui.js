@@ -16,5 +16,8 @@ const focus = (element) => element.classList.add("selected");
 window.addEventListener("focus", (e) => callFunction(focus, e), true);
 window.addEventListener("blur", (e) => callFunction(blur, e), true);
 window.addEventListener("keydown", e =>{//work on this
-  if(e.key == "Enter" &&  document.activeElement.className && document.activeElement.className.match(classesWithCheckboxes)) document.activeElement.classList.toggle('on')
+  if(e.key == "Enter") {
+     if( document.activeElement.className && document.activeElement.className.match(classesWithCheckboxes)) document.activeElement.classList.toggle('on')
+    if(document.activeElement.className.match("selector")) toggleSelectedItem(document.activeElement)
+    }
 })

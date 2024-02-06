@@ -1,5 +1,5 @@
 # Stay hydrated
-Water intake reminder or [KaiOS](https://www.kaiostech.com).
+Water intake reminder for [KaiOS](https://www.kaiostech.com).
 <br>
 
 ## Description

@@ -1,6 +1,7 @@
 const waterIntakeGoalAuto = {
     parent: document.querySelector('#autoGoal'),
     radio: document.querySelector('#autoGoal .radio-container__radio'),
+    calculatedWaterIntakeDisplay: document.querySelector('.calculatedNeededWaterIntake')
 }
 const waterIntakeGoalOwn = {
     parent: document.querySelector('#ownGoal'),
