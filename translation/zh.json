@@ -21,5 +21,6 @@
   "ml": "毫升",
   "oz": "盎司",
   "wake_up_time": "唤醒时间",
-  "sleep_time": "睡眠时间"
+  "sleep_time": "睡眠时间",
+  "finish": "Finish"
 }

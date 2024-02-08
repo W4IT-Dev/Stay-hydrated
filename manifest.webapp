@@ -18,12 +18,47 @@
       "subtitle": "Short description for the user",
       "description": "Brief description of your app"
     },
-    "de-DE": {
+    "ar-AR": {
       "name": "Bleib hydriert",
       "subtitle": "Short description for the user",
       "description": "Brief description of your app"
     },
     "fr-FR": {
+      "name": "Restez hydraté",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "es-ES": {
+      "name": "Stay hydrated",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"LU
+    },
+    "de-DE": {
+      "name": "Bleib hydriert",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "lb-LU": {
+      "name": "Restez hydraté",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "pt-PT": {
+      "name": "Stay hydrated",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "ru-RU": {
+      "name": "Bleib hydriert",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "uk-UA": {
+      "name": "Restez hydraté",
+      "subtitle": "Short description for the user",
+      "description": "Brief description of your app"
+    },
+    "zh-CN": {
       "name": "Restez hydraté",
       "subtitle": "Short description for the user",
       "description": "Brief description of your app"

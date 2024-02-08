@@ -18,3 +18,10 @@ const fluidUnit = {
 }
 
 const weight = document.querySelector('#weightInput')
+
+const softkeys = {
+    parent: document.querySelector('.softkeys'),
+    left: document.querySelector('.softkey-left'),
+    center: document.querySelector('.softkey-center'),
+    right: document.querySelector('.softkey-right'),
+}

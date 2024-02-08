@@ -1,4 +1,5 @@
-var supportedLanguages = ['en', 'fr', 'es', 'de', 'ru', 'zh', 'ar'];
+// var supportedLanguages = ['en', 'fr', 'es', 'de', 'ru', 'zh', 'ar', 'uk'];
+const supportedLanguages = ['ar','de','en','es','fr','lb','pt','ru','uk','zh']
 var translations = {};
 
 function loadLanguageFile(language) {

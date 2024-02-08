@@ -21,5 +21,6 @@
   "ml": "ml",
   "oz": "oz",
   "wake_up_time": "Wake-up time",
-  "sleep_time": "Sleep time"
+  "sleep_time": "Sleep time",
+  "finish": "Finish"
 }

@@ -18,7 +18,7 @@
     <script src="/translation/script.js" defer></script>
 </head>
 
-<body>
+<body onload="calculateWaterIntake();">
     <div id="app">
         <header id="header" data-translate="setup"></header>
         <div class="toast"></div>
@@ -34,16 +34,17 @@
             <!-- AUTO -->
             <div id="autoGoal" class="radio-container">
                 <p class="radio-container__text" data-translate="auto_calculated"></p>
-                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <input type="radio" tabindex="0" data-focus=" ,SELECT, " class="focusable radio-container__input" />
                 <div class="radio-container__radio"></div>
             </div>
-            <div tabindex="0" id="weightUnitChoose" class="selector focusable list-item" value="kg">
+            <div tabindex="0" id="weightUnitChoose" class="selector focusable list-item" data-focus=", SWITCH, ">
                 <div class="item selected" id="leftItem" data-translate="kg">kg</div>
                 <div class="item " id="rightItem" data-translate="lbs">lbs</div>
             </div>
             <div class="input-container">
                 <label class="input-container__label" data-translate="weight"></label>
-                <input type="tel" tabindex="0" id="weightInput" class="input-container__input focusable" value="60" oninput="calculateWaterIntake();" />
+                <input type="tel" tabindex="0" id="weightInput" class="input-container__input focusable" data-focus=""
+                    value="60" oninput="calculateWaterIntake();" />
             </div>
             <div class="list-item small focusable" tabindex="0" data-focus=" ,EDIT,">
                 <p class="list-item__text calculatedNeededWaterIntake">Goal: 2542ml</p>
@@ -52,15 +53,15 @@
             <!-- OWN GOAL -->
             <div id="ownGoal" class="radio-container">
                 <p class="radio-container__text" data-translate="own_goal"></p>
-                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <input type="radio" tabindex="0" class="focusable radio-container__input" data-focus=", SELECT," />
                 <div class="radio-container__radio"></div>
             </div>
-            <div tabindex="0" class="selector focusable list-item hidden">
+            <div tabindex="0" class="selector focusable list-item hidden" data-focus=", SWITCH,">
                 <div class="item" id="leftItem" data-translate="ml">ml</div>
                 <div class="item selected" id="rightItem" data-translate="oz">oz</div>
             </div>
             <div class="input-container hidden">
-                <label class="input-container__label" data-translate="amount"></label>
+                <label class="input-container__label" data-translate="amount" data-focus=""></label>
                 <input type="tel" tabindex="0" class="input-container__input focusable" />
             </div>
 
@@ -70,31 +71,30 @@
                 <p class="slider-container__text" data-translate="daily_workout_length"></p>
                 <p class="slider-container__subtext">30 min</p>
                 <input type="range" tabindex="0" min="0" max="120" value="30" step="15"
-                    class="slider-container__slider focusable" />
+                    class="slider-container__slider focusable" data-focus=", PRECISE," />
             </div>
 
             <!-- CUP SIZE -->
             <div class="separator" data-translate="cup_size"></div>
-            <div tabindex="0" id="fluidUnitChoose" class="selector focusable list-item"
-                onclick=" toggleSelectedItem(this);">
+            <div tabindex="0" id="fluidUnitChoose" class="selector focusable list-item" data-focus=", SWITCH,">
                 <div class="item selected" id="leftItem" data-translate="ml">ml</div>
                 <div class="item " id="rightItem" data-translate="oz">oz</div>
             </div>
             <div class="input-container">
                 <label class="input-container__label" data-translate="amount"></label>
-                <input type="tel" tabindex="0" class="input-container__input focusable" />
+                <input type="tel" tabindex="0" class="input-container__input focusable" data-focus="" value="250" />
             </div>
 
             <!-- drinking_reminder_interval -->
             <div class="separator" data-translate="drinking_reminder_interval"></div>
             <div class="radio-container">
                 <p class="radio-container__text" data-translate="auto_calculated"></p>
-                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <input type="radio" tabindex="0" class="focusable radio-container__input" data-focus=", SELECT ," />
                 <div class="radio-container__radio"></div>
             </div>
             <div class="radio-container">
                 <p class="radio-container__text" data-translate="hourly"></p>
-                <input type="radio" tabindex="0" class="focusable radio-container__input" />
+                <input type="radio" tabindex="0" class="focusable radio-container__input" data-focus=", SELECT," />
                 <div class="radio-container__radio"></div>
             </div>
 
@@ -107,6 +107,11 @@
             <div class="input-container">
                 <label class="input-container__label " data-translate="sleep_time"></label>
                 <input type="time" tabindex="0" class="input-container__input focusable" value="20:00" />
+            </div>
+
+            <div class="list-item-indicator focusable" tabindex="0" data-focus=" , SELECT, ">
+                <p class="list-item-indicator__text" data-translate="finish" ></p>
+                <span class="list-item-indicator__indicator"></span>
             </div>
 
         </div><!--content-->
